@@ -1,81 +1,108 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Welcome to Paperlayer.">
+  <div class="max-w-4xl mx-auto py-32">
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center mb-12"
+    >
+      We May Not Be Good at Basketball, But We Know Paper
+    </h1>
+    <p class="text-lg leading-8 text-gray-600 text-center">
+      Providing High-Quality Paper Products (and Awkward Moments) Since 2005.
+      Our Paper Is Perfect for Scribbling Down Your Best That's-What-She-Said
+      Jokes.
+    </p>
+  </div>
+  <div class="grid grid-cols-2 max-w-4xl mx-auto gap-12 mb-24">
+    <div>
+      <img
+        src="/packaging-box.jpg"
+        height="667"
+        width="1000"
+        alt="Packaging Box"
+        class="rounded-lg shadow-lg"
+      />
+      <div class="mt-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-serif">Sustainable Shipping Boxes</h3>
+          <div class="text-sm font-medium text-gray-400">$5.99</div>
+        </div>
+        <div>
+          <button
+            class="rounded-full border border-gray-700 px-4 py-2 hover:bg-black hover:text-white hover:border-gray-900"
+          >
+            Buy now</button
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        src="/wrapper.jpg"
+        height="667"
+        width="1000"
+        alt="Wrapper"
+        class="rounded-lg shadow-lg"
+      />
+      <div class="mt-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-serif">Product Packaging</h3>
+          <div class="text-sm font-medium text-gray-400">$0.99</div>
+        </div>
+        <div>
+          <button
+            class="rounded-full border border-gray-700 px-4 py-2 hover:bg-black hover:text-white hover:border-gray-900"
+          >
+            Buy now</button
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        src="/coffee-packaging.jpg"
+        height="667"
+        width="1000"
+        alt="coffee packaging"
+        class="rounded-lg shadow-lg"
+      />
+      <div class="mt-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-serif">Packaging Pouch</h3>
+          <div class="text-sm font-medium text-gray-400">$2.99</div>
+        </div>
+        <div>
+          <button
+            class="rounded-full border border-gray-700 px-4 py-2 hover:bg-black hover:text-white hover:border-gray-900"
+          >
+            Buy now</button
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        src="/wrapping-paper.jpg"
+        height="667"
+        width="1000"
+        alt="Wrapping paper"
+        class="rounded-lg shadow-lg"
+      />
+      <div class="mt-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-serif">Recycled Wrapping Paper</h3>
+          <div class="text-sm font-medium text-gray-400">$1.99</div>
+        </div>
+        <div>
+          <button
+            class="rounded-full border border-gray-700 px-4 py-2 hover:bg-black hover:text-white hover:border-gray-900"
+          >
+            Buy now</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
