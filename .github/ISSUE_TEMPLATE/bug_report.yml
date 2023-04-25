@@ -2,15 +2,17 @@ name: 🐞 Bug report
 description: Create a report to help us improve
 labels: 'Bug'
 body:
-  - type: markdown
+  - type: textarea
     attributes:
-      value: |
-        ## Describe the bug
-        A concise description of what you expected to happen along with screenshots if applicable.
-  - type: markdown
+      label: Describe the bug
+      description: A concise description of what you expected to happen along with screenshots if applicable.
+    validations:
+      required: true
+  - type: textarea
     attributes:
-      value: |
-        ## Steps to reproduce the behavior.
+      label: To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
         1. In this environment...
         2. With this config...
         3. Run '...'
