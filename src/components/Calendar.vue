@@ -490,4 +490,10 @@ const days = [
   { date: "2022-02-06", events: [] },
 ];
 const selectedDay = days.find((day) => day.isSelected);
+
+onMounted(() => {
+  fetch('https://jsonplaceholder.typicode.com/posts/2')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+})
 </script>
