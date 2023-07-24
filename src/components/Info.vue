@@ -636,4 +636,10 @@ const moods = [
 
 const mobileMenuOpen = ref(false);
 const selected = ref(moods[5]);
+
+onMounted(() => {
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+})
 </script>
