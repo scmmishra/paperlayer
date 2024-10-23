@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Debug 2">
+  <button onclick="window.parent.postMessage('chatwoot-dashboard-app:fetch-info', '*')">Send</button>
+
+  <script is:inline>
+  	const x = (Math.random() * 1000) | 0;
+  	console.log(x);
+  
+  	window.addEventListener('message', function(event) {
+  		console.debug(x, 'Got message', event);
+  
+  		const event_data = JSON.parse(event.data);
+  		console.log(x, 'Got event:', event_data);
+  	});
+  </script>
+</Layout>
